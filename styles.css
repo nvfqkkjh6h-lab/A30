@@ -634,7 +634,7 @@ body {
 
 /* ==================== ANALYTICS ==================== */
 .chart-container { position: relative; height: 260px; width: 100%; margin-top: 12px; }
-/* 画面下部固定広告のスタイリング */
+/* 画面下部固定広告エリア（どちらのタイプも対応） */
 #sticky-ad-container {
   position: fixed;
   bottom: 0;
@@ -643,21 +643,25 @@ body {
   background-color: #ffffff;
   border-top: 1px solid #e0e0e0;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* アプリの他の要素の上に表示 */
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 0;
-  min-height: 50px; /* 広告枠の最低限の高さ */
+  padding: 4px 0;
+  min-height: 60px; /* どちらの広告でも高さがガタつかない設定 */
 }
 
 .ad-content {
   text-align: center;
   width: 100%;
-  max-width: 728px; /* バナー広告の一般的な最大幅 */
+  max-width: 728px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* アプリ本体のコンテンツが広告と重なって隠れないように最下部に余白を追加 */
+/* アプリ本体のコンテンツが広告で隠れないよう最下部に余白を追加 */
 body {
-  padding-bottom: 70px; /* 広告の高さ + 余白分 */
+  padding-bottom: 75px;
 }
