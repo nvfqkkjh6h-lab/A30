@@ -634,3 +634,30 @@ body {
 
 /* ==================== ANALYTICS ==================== */
 .chart-container { position: relative; height: 260px; width: 100%; margin-top: 12px; }
+/* 画面下部固定広告のスタイリング */
+#sticky-ad-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* アプリの他の要素の上に表示 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  min-height: 50px; /* 広告枠の最低限の高さ */
+}
+
+.ad-content {
+  text-align: center;
+  width: 100%;
+  max-width: 728px; /* バナー広告の一般的な最大幅 */
+}
+
+/* アプリ本体のコンテンツが広告と重なって隠れないように最下部に余白を追加 */
+body {
+  padding-bottom: 70px; /* 広告の高さ + 余白分 */
+}
