@@ -226,6 +226,45 @@
           <button class="btn btn-danger btn-sm" onclick="clearAllDataAndReset()">すべてのデータをリセット（全消去）</button>
         </div>
       </div>
+      <!-- プライバシーポリシー表示カード -->
+<div class="apple-card" style="margin-top: 1.5rem;">
+  <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: #1e293b;">プライバシーポリシー・免責事項</h3>
+  <p style="font-size: 0.85rem; color: #64748b; line-height: 1.5; margin-bottom: 1rem;">
+    当アプリにおける個人情報の取り扱い、広告配信、および解析ツールについての掲載情報です。
+  </p>
+  <button type="button" class="btn btn-secondary" style="width: 100%;" onclick="openPrivacyModal()">
+    プライバシーポリシーを読む
+  </button>
+</div>
+
+<!-- プライバシーポリシー用モーダル -->
+<div id="modal-privacy" class="modal" style="display: none; align-items: center; justify-content: center; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999;">
+  <div style="background: #fff; width: 90%; max-width: 600px; max-height: 80vh; overflow-y: auto; padding: 1.5rem; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); position: relative;">
+    <h2 style="font-size: 1.25rem; margin-bottom: 1rem; color: #0f172a;">プライバシーポリシー</h2>
+    
+    <div style="font-size: 0.85rem; color: #334155; line-height: 1.6; text-align: left;">
+      <h4 style="font-size: 0.95rem; margin-top: 1rem; margin-bottom: 0.25rem; color: #1e293b;">1. 広告の配信について</h4>
+      <p>当アプリでは、第三者配信の広告サービス（Google AdSense、i-mobile 等）を利用する場合があります。これらの広告配信事業者は、ユーザーの興味に応じた商品やサービスの広告を表示するため、Cookie（クッキー）を使用することがあります。</p>
+      <p>Google AdSenseに関して、Cookieを使用することで当サイトや他サイトへのアクセス情報に基づき広告を配信します。パーソナライズ広告を無効にする設定は <a href="https://adssettings.google.com/authenticated" target="_blank" rel="noopener noreferrer" style="color: #4f46e5;">Googleの広告設定</a> をご確認ください。</p>
+
+      <h4 style="font-size: 0.95rem; margin-top: 1rem; margin-bottom: 0.25rem; color: #1e293b;">2. アクセス解析ツールについて</h4>
+      <p>当アプリでは、サービスの改善や利用状況の把握のためにアクセス解析ツールを利用することがあります。データ収集のためにCookieを使用しますが、収集されるデータは匿名であり、個人を特定するものではありません。</p>
+
+      <h4 style="font-size: 0.95rem; margin-top: 1rem; margin-bottom: 0.25rem; color: #1e293b;">3. 個人情報の利用目的と管理</h4>
+      <p>当アプリで保存される学習データや登録情報は、ユーザーの端末内（LocalStorage）に記録され、管理・処理されます。外部サーバーへ無断で個人情報を送信・共有することはありません。</p>
+
+      <h4 style="font-size: 0.95rem; margin-top: 1rem; margin-bottom: 0.25rem; color: #1e293b;">4. 免責事項</h4>
+      <p>当アプリのコンテンツ・情報につきまして、可能な限り正確な情報を掲載するよう努めておりますが、正確性や安全性を保証するものではありません。当アプリを利用したことで生じた直接・間接の損害について、一切の責任を負いかねます。</p>
+
+      <h4 style="font-size: 0.95rem; margin-top: 1rem; margin-bottom: 0.25rem; color: #1e293b;">5. 制定日・改定日</h4>
+      <p>制定日：2026年1月1日</p>
+    </div>
+
+    <div style="margin-top: 1.5rem; text-align: right;">
+      <button type="button" class="btn btn-primary" onclick="closePrivacyModal()">閉じる</button>
+    </div>
+  </div>
+</div>
 
     </section>
 
