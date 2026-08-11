@@ -841,3 +841,17 @@ function renderAnalytics() {
     }
   }
 }
+/* ==================== プライバシーポリシー モーダル制御 ==================== */
+function openPrivacyModal() {
+  const modal = document.getElementById('modal-privacy');
+  if (modal) {
+    modal.style.display = 'flex';
+  }
+}
+
+function closePrivacyModal() {
+  const modal = document.getElementById('modal-privacy');
+  if (modal) {
+    modal.style.display = 'none';
+  }
+}
